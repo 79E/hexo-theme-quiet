@@ -1,0 +1,35 @@
+
+.footer{
+    height: 80px;
+    display: flex;
+    padding:0 calc((100% - 1160px)/2);
+}
+.footer .Copyright{
+    display: flex;
+    flex-basis: 0;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    color: #898FA0;
+    font-size: 14px;
+    margin-left: 18px;
+}
+.footer .contact{
+    display: flex;
+    flex-basis: 0;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+.footer .contact a{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    margin-left: 7px;
+    background: url('../image/logo.png')no-repeat;
+    background-size: 100% 100%;
+    justify-content: center;
+    align-items: center;
+    color: #898FA0;
+    margin-right: 18px;
+}

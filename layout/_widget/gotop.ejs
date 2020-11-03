@@ -1,0 +1,76 @@
+<%- js('js/jquery.min.js') %>
+<%- js('js/gotop.js') %>
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: block;
+            border-radius: 50%;
+            width: 66px;
+            height: 66px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            transition: border .5s;
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 30px;
+            height: 30px;
+            margin-top: 17.5px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    //示例
+    $('#js-go_top').gotoTop({
+        offset: 500, //距离顶部的位置
+        speed: 300, //移动到顶部的速度
+        // iconSpeed: 300, //icon动画样式的速度
+        animationShow: {
+            'transform': 'translate(0,0)',
+            'transition': 'transform .5s ease-in-out'
+        }, //icon动画样式显示时
+        animationHide: {
+            'transform': 'translate(100px,0)',
+            'transition': 'transform .5s ease-in-out'
+        } //icon动画样式隐藏时
+    });
+</script>

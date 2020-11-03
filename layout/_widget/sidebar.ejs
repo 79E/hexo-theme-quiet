@@ -1,0 +1,71 @@
+<div class="sidebar">
+
+    <img src="https://www.79bk.cn/image/logo.png" alt="">
+
+    <ul>
+        <% for(const menu in theme.menus) { %>
+        <li><a href="<%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a><span class="dot"></span></li>
+        <% } %>
+    </ul>
+
+</div>
+<div class='shelter'
+    style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'>
+</div>
+<style>
+    .sidebar {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(255, 255, 255);
+        z-index: 999;
+        text-align: center;
+    }
+
+    .sidebar img {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .sidebar ul {
+        width: 100%;
+
+    }
+
+    .sidebar ul li {
+        list-style: none;
+        font-size: 1.2em;
+        padding: 15px 0;
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #898FA0;
+        width: 100%;
+        text-decoration: none;
+    }
+</style>
+
+<script>
+    $(function () {
+        $('.h-right-close>svg').click(function () {
+            $('.sidebar').animate({ width: "66%" }, 500)
+            $('.shelter').fadeIn("slow");
+        })
+
+        $('.shelter').click(function (e) {
+            $('.sidebar').animate({ width: "0" }, 500)
+            $('.shelter').fadeOut("slow");
+        })
+
+
+    })
+
+
+
+</script>

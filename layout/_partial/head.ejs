@@ -1,0 +1,23 @@
+<%
+var title = theme.title
+if (page.title) {
+  title = page.title
+}
+%>
+<title><%= title %>-<%- theme.suffix %></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="<%- theme.icon %>">
+<% if(page.tags && page.tags.data.length) { 
+  let text = ''
+  %>
+<% page.tags.data.forEach((item, index) => {
+    text += item.name + ','
+  }) %>
+<meta name="keywords" content="<%- text %>">
+<meta name="description" content="<%- page.excerpt %>">
+<% }else{ %>
+<meta name="keywords" content="<%- theme.keyword %>">
+<meta name="description" content="<%- theme.web_description %>">
+<% } %>

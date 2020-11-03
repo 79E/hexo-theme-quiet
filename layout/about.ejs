@@ -1,0 +1,23 @@
+<%- css('css/about.css') %>
+<%- partial('_partial/header',{name:'about'}) %>
+<div class="header-bg">
+    <div class="bg-content">
+        <img src="<%= page.portrait %>" alt="Q">
+        <h1> <%- page.aubot %>
+            <span><%- page.describe %></span>
+        </h1>
+    </div>
+</div>
+
+<div class="article-content">
+    <%- css('css/page_cente.css')   %>
+    <div id="article" class="content">
+        <%- page.content %>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.article-content').addClass('content-move')
+    })
+</script>

@@ -1,0 +1,25 @@
+<div class="header-bg">
+    <div class="bg-content">
+        <ul class="tag">
+            <% if(page.tags && page.tags.data.length) { %>
+            <% page.tags.data.forEach((item, index) => { %>
+            <li><a href="/tags/<%- item.name %>"><%= item.name %></a></li>
+            <% }) %>
+            <% } %>
+        </ul>
+        <h1><%- page.title %></h1>
+        <div class="article-info">
+            <div class="article-author">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g>
+                        <path fill="#12183A"
+                            d="M6.187 15.265A6.47 6.47 0 0 0 10 16.5a6.47 6.47 0 0 0 3.813-1.235A4.99 4.99 0 0 0 10 13.5a4.99 4.99 0 0 0-3.813 1.765zM5.082 14.25A6.485 6.485 0 0 1 10 12c1.965 0 3.726.872 4.918 2.25a6.5 6.5 0 1 0-9.836 0zM10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
+                        </path>
+                    </g>
+                </svg>
+                <span> <a href=""><%- theme.author %></a></span>
+                <p><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
+            </div>
+        </div>
+    </div>
+</div>

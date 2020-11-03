@@ -1,0 +1,82 @@
+# 网站标题
+title: 喬 JoeBlog
+# 网站标题后缀
+suffix: 乔越博客
+# 作者名称(会显示在首页文章下面)
+author: CHANGEQ
+# 首页简介（显示在首页顶部Logo的那句话）
+home_describe: A COLLEGE STUDENT WITH IDEALS AND BELIEFS.
+# 网站关键字
+keyword: 乔越博客,个人博客,hexo
+# 网站描述
+web_description: 
+# 导航
+menus:
+  home: /
+  archive: /archives
+  categories: /categories
+  tags: /tags
+  links: /links
+  about: /about
+# 导航名称
+menus_title:
+  home: HOME
+  archive: ARCHIVE
+  categories: CATEGORIES
+  tags: TAGS
+  links: LINKS
+  about: ABOUT
+  
+# logo
+logo: /image/logo.png
+# 网页标签上那个小图标 一定要用本地存储
+icon: /image/favicon.ico
+# 每个页面上面的图表
+topIcon:
+  homeIcon: "/image/logo.png"
+  archivesIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgicon-remixicon.svg"
+  tagIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgtags.svg"
+  linksIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imga20r7-cftji.svg"
+  categoriesIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgblogmyCategory.svg"
+  
+# 标签页显示多少个标签
+tagsNum: 1000
+# 友情链接
+linksList:
+  - {
+    title: '乔越博客',
+    intro: '收藏回忆与分享技术的地方',
+    link: 'https://www.79bk.cn/',
+    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
+  }
+  - {
+    title: '乔越博客',
+    intro: '互联网资源整合共享交流与发布',
+    link: 'https://www.79bk.cn/',
+    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
+  }
+# 文字内点击图片放大相关配置
+picture:
+  # 蒙版的颜色也就是 打开图片背景 显示的颜色
+  colour: '#333'
+  # 透明度
+  opacity: 0.5
+  # 图片角度 就是显示图片的角度
+  imgRadius: "10px"
+#默认的cover (默认缩略图) 在没有填写
+default_cover: 
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img10.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img11.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img12.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img13.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img14.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img15.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img16.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img17.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img18.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img19.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img20.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img21.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img22.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img23.jpg
+  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img24.jpg
