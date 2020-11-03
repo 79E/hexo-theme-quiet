@@ -1,14 +1,24 @@
-![Quiet](https://www.79bk.cn/image/logo.png)
+<div align="center">
+  <a href="https://github.com/qiaobug/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.79bk.cn/image/logo.png" alt="quiet logo" width="100">
+  </a>
+</div>
 
+<h3 align="center">一款简约扁平化的 Hexo 主题</h3>  
 
-
-<h3 style="text-align: center;">一款简约的 Hexo 主题</3>
-
-<div style="margin: auto; text-align: center;">
-	<img src="https://img.shields.io/badge/github-QiaoBug-brightgreen.svg">
-  <img src="https://img.shields.io/badge/Hexo->=4.0-blue.svg">
-    <img src="https://img.shields.io/badge/node->=10.9.0-red.svg">
-      <img src="https://img.shields.io/badge/license-MIT-green.svg">
+<div align="center">
+  <a href="https://www.79bk.cn/" target="_blank" rel="noopener noreferrer">
+    <img alt="releases" src="https://img.shields.io/badge/author-qiaobug-blue.svg?style=flat-square&longCache=true">
+  </a>
+  <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
+    <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
+  </a>
+  <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
+    <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
+  </a>
+  <a href="https://github.com/qiaobug/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+    <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
+  </a>
 </div>
 
 ![Quiet](https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuiet.png)
