@@ -1,13 +1,10 @@
 <div class="sidebar">
-
-    <img src="https://www.79bk.cn/image/logo.png" alt="">
-
+    <img src="<%= theme.logo  %>" alt="">
     <ul>
         <% for(const menu in theme.menus) { %>
         <li><a href="<%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a><span class="dot"></span></li>
         <% } %>
     </ul>
-
 </div>
 <div class='shelter'
     style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'>
@@ -52,20 +49,5 @@
 </style>
 
 <script>
-    $(function () {
-        $('.h-right-close>svg').click(function () {
-            $('.sidebar').animate({ width: "66%" }, 500)
-            $('.shelter').fadeIn("slow");
-        })
-
-        $('.shelter').click(function (e) {
-            $('.sidebar').animate({ width: "0" }, 500)
-            $('.shelter').fadeOut("slow");
-        })
-
-
-    })
-
-
-
+    $(function () { $('.h-right-close>svg').click(function () { $('.sidebar').animate({ width: "66%" }, 500); $('.shelter').fadeIn("slow") }); $('.shelter').click(function (e) { $('.sidebar').animate({ width: "0" }, 500); $('.shelter').fadeOut("slow") }) })
 </script>

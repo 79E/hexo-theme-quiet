@@ -1,7 +1,7 @@
 <%- css('css/links.css') %>
 <%- partial('_partial/header',{name:'links'}) %>
-<%- css('/highlight/styles/atom-one-dark') %>
-<%- js('/highlight/highlight.pack.js') %>
+<%- css('css/atom-one-dark.css') %>
+
 <script>hljs.initHighlightingOnLoad();</script>
 <div class="header-bg">
     <div class="bg-content">
@@ -36,8 +36,4 @@
         </div>
     </div>
 </div>
-<script>
-    $(function () {
-        $('.links-content').addClass('content-move')
-    })
-</script>
+<script>$(function () { $('.links-content').addClass('content-move'); })</script>

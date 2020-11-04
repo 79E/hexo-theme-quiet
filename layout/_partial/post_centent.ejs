@@ -4,7 +4,7 @@
     </div>
 </div>
 <style>
-    @media screen and (min-width: 600px) {
+    @media screen and(min-width:600px) {
         .noneimg {
             cursor: pointer;
             display: none;
@@ -16,13 +16,11 @@
             top: 0;
             right: 0;
             bottom: 0;
-            margin: auto;
-
+            margin: auto
         }
-
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and(max-width:600px) {
         .noneimg {
             cursor: pointer;
             display: none;
@@ -34,37 +32,11 @@
             top: 0;
             right: 0;
             bottom: 0;
-            margin: auto;
+            margin: auto
         }
-
     }
 </style>
 
 <script>
-    $(function () {
-
-        // 点击图片进行放大
-        $('body').click(function (e) {
-            if ($('.noneimg').length !== 0 && $('.nonediv').length !== 0) {
-                $(".noneimg").fadeOut("slow");
-                $(".nonediv").fadeOut("slow");
-                setTimeout(function () {
-                    $('.noneimg').remove()
-                    $('.nonediv').remove()
-                }, 800);
-            } else {
-                console.log()
-                if (e.target.tagName == "IMG") {
-                    let imgUrl = "<img class='noneimg' style='border-radius: <%=theme.picture.imgRadius %>;' src='" + e.target.currentSrc + "'>"
-                    let MDiv = "<div class='nonediv'  style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'></div>"
-                    $('body').append(MDiv)
-                    $('body').append(imgUrl)
-                    $(".noneimg").fadeIn("slow");
-                    $(".nonediv").fadeIn("slow");
-                }
-            }
-        })
-        $('.article-content').addClass('content-move');
-    })
-
+    $(function () { $('body').click(function (e) { if ($('.noneimg').length !== 0 && $('.nonediv').length !== 0) { $(".noneimg").fadeOut("slow"); $(".nonediv").fadeOut("slow"); setTimeout(function () { $('.noneimg').remove(); $('.nonediv').remove() }, 800) } else { if (e.target.tagName == "IMG") { let imgUrl = "<img class='noneimg' style='border-radius: <%=theme.picture.imgRadius %>;' src='" + e.target.currentSrc + "'>"; let MDiv = "<div class='nonediv'  style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'></div>"; $('body').append(MDiv); $('body').append(imgUrl); $(".noneimg").fadeIn("slow"); $(".nonediv").fadeIn("slow") } } }); $('.article-content').addClass('content-move') });
 </script>

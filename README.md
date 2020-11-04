@@ -31,13 +31,13 @@
 
 ### 🚁快速使用
 
-🍏我们首先下载主题
+我们首先下载主题
 
 ```
 $ git clone https://github.com/QiaoBug/hexo-theme-quiet.git
 ```
 
-🍐然后我们修改Hexo根目录下的 `_config.yml` 文件启用 Quiet 主题：
+然后我们修改Hexo根目录下的 `_config.yml` 文件启用 Quiet 主题：
 
 （大概在最后的位置 --- 你需要将下载下来主题文件放在 themes里面并且将名字修改为 Quiet ）
 
@@ -54,11 +54,22 @@ index_generator:
   order_by: -date
 ```
 
-将下面此项设置为`false`即可显示文章的代码高亮
+将下面此项设置为跟我一样即可显示文章的代码高亮
 
 ```
+# 我的配置
 highlight:
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace: ''
+  wrap: true
+  hljs: true
+prismjs:
   enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 ```
 
 #### 🔧标签页
@@ -141,6 +152,37 @@ author: 79bk.cn
 ---
 ```
 
+### 📖发布文章
+
+你需要在发布文章的时候写标头
+
+```
+title: 一个简约扁平化的Hexo静态主题博客-Quiet
+categories: 项目案例
+tags:
+  - Hexo
+  - Quiet
+  - 主题
+  - 静态主题
+excerpt: 采用简约大方的扁平化Hexo-Quiet主题
+date: 2020-11-03 20:33:36
+cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
+```
+
+**解释**
+
+`title`：文章标题
+
+`categories`：分类（最好只写一个）
+
+`tags`：标签可以多个
+
+`excerpt`：描述
+
+`date`：创建日期
+
+`cover`：缩略图（你不填就用默认的了）
+
 ### 🏆主题配置
 
 我们进入主题根目录下的`themes`文件夹下的`Quiet`文件里面的`_config.yml`配置文件
@@ -156,4 +198,6 @@ author: 79bk.cn
 ![LicenseMIT](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 
 根据 [MIT](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/LICENSE) 协议开源
+
+
 
