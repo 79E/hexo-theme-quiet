@@ -4,39 +4,26 @@
     </div>
 </div>
 <style>
-    @media screen and(min-width:600px) {
-        .noneimg {
-            cursor: pointer;
-            display: none;
-            z-index: 109;
-            width: 600px;
-            height: auto;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto
-        }
+    #noneimg img {
+        display: none;
+        z-index: 109;
+        width: 600px !important;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
     }
 
-    @media screen and(max-width:600px) {
-        .noneimg {
-            cursor: pointer;
-            display: none;
-            z-index: 109;
-            width: 88%;
-            height: auto;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            width: 88%
         }
     }
 </style>
-
 <script>
-    $(function () { $('body').click(function (e) { if ($('.noneimg').length !== 0 && $('.nonediv').length !== 0) { $(".noneimg").fadeOut("slow"); $(".nonediv").fadeOut("slow"); setTimeout(function () { $('.noneimg').remove(); $('.nonediv').remove() }, 800) } else { if (e.target.tagName == "IMG") { let imgUrl = "<img class='noneimg' style='border-radius: <%=theme.picture.imgRadius %>;' src='" + e.target.currentSrc + "'>"; let MDiv = "<div class='nonediv'  style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'></div>"; $('body').append(MDiv); $('body').append(imgUrl); $(".noneimg").fadeIn("slow"); $(".nonediv").fadeIn("slow") } } }); $('.article-content').addClass('content-move') });
+    $(function () { $('#article').click(function (e) { if (e.target.tagName == "IMG") { if ($('#nonediv').length == 0) { let MImg = `<div id='noneimg'><img src='${e.target.currentSrc}'></div>`; let MDiv = "<div id='nonediv' style='cursor: pointer;display: none; position: fixed;left: 0;top: 0; right: 0;bottom: 0;background-color: <%= theme.picture.colour %>;opacity:<%= theme.picture.opacity %>;z-index: 108;'></div>"; $('#article').append(MDiv); $('#article').append(MImg); $("#nonediv").fadeIn("slow"); $("#noneimg img").fadeIn("slow") } } else { if ($('#nonediv').length !== 0) { $("#noneimg ").fadeOut("slow"); $("#nonediv").fadeOut("slow"); setTimeout(function () { $('#nonediv').remove(); $('#noneimg').remove() }, 500) } } }); $('.article-content').addClass('content-move') });
 </script>
