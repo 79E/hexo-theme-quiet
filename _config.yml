@@ -9,15 +9,7 @@ home_describe: A COLLEGE STUDENT WITH IDEALS AND BELIEFS.
 # 网站关键字
 keyword: 乔越博客,个人博客,hexo
 # 网站描述
-web_description: 
-# 导航
-menus:
-  home: /
-  archive: /archives
-  categories: /categories
-  tags: /tags
-  links: /links
-  about: /about
+web_description: 描述
 # 导航名称
 menus_title:
   home: HOME
@@ -26,6 +18,14 @@ menus_title:
   tags: TAGS
   links: LINKS
   about: ABOUT
+# 导航 （不建议修改）
+menus:
+  home: /
+  archive: /archives
+  categories: /categories
+  tags: /tags
+  links: /links
+  about: /about
   
 # logo
 logo: /image/logo.png
@@ -41,6 +41,21 @@ topIcon:
   
 # 标签页显示多少个标签
 tagsNum: 1000
+# 网页访问统计
+web_analytics:  
+  enable: false #需要改为true
+  baidu: 4b5fe1472f22fa  # （替换）百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+# 底部显示的图标（github 或者其他）
+bottomIcon: 
+  #可以多个
+  - {
+    #描述名称
+    name: 'Github',
+    #图标    
+    iconLink: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png',
+    #跳转链接    
+    toUrl: 'https://github.com/qiaobug'
+  }
 # 友情链接
 linksList:
   - {
