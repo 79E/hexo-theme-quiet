@@ -8,6 +8,7 @@ author: CHANGEQ
 home_describe: A COLLEGE STUDENT WITH IDEALS AND BELIEFS.
 # 网站关键字
 keyword: 乔越博客,个人博客,hexo
+is_article_img: false  #false是否开启文章背景图显示(随机图片)
 # 网站描述
 web_description: 描述
 # 导航名称
