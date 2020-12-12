@@ -1,13 +1,13 @@
 # 网站标题
-title: 喬 JoeBlog
+title: Hexo主题-Quiet主题-Hexo扁平化主题安装
 # 网站标题后缀
-suffix: 乔越博客
+suffix: Quiet
 # 作者名称(会显示在首页文章下面)
 author: CHANGEQ
 # 首页简介（显示在首页顶部Logo的那句话）
 home_describe: A COLLEGE STUDENT WITH IDEALS AND BELIEFS.
 # 网站关键字
-keyword: 乔越博客,个人博客,hexo
+keyword: hexo主题,hexo扁平化主题,Quiet主题
 is_article_img: false  #false是否开启文章背景图显示(随机图片)
 # 网站描述
 web_description: 描述
@@ -62,12 +62,6 @@ linksList:
   - {
     title: '乔越博客',
     intro: '收藏回忆与分享技术的地方',
-    link: 'https://www.79bk.cn/',
-    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
-  }
-  - {
-    title: '乔越博客',
-    intro: '互联网资源整合共享交流与发布',
     link: 'https://www.79bk.cn/',
     image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
   }
