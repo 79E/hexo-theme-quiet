@@ -73,20 +73,5 @@ picture:
   opacity: 0.5
   # 图片角度 就是显示图片的角度
   imgRadius: "10px"
-#默认的cover (默认缩略图) 在没有填写
-default_cover: 
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img10.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img11.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img12.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img13.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img14.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img15.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img16.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img17.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img18.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img19.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img20.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img21.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img22.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img23.jpg
-  - https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/img24.jpg
+#默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
+default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php

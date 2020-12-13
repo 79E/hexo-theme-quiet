@@ -1,37 +1,41 @@
 <%- css('css/header.css') %>
-<div class="header">
-	<div class="header-top">
-		<div class="h-left">
-			<a href="<%= theme.menus.home %>">
-				<img src="<%- theme.logo %>" alt="">
-			</a>
-		</div>
-		<div class="h-right">
-			<ul>
-				<% for(const menu in theme.menus) { %>
-				<% if( name == menu ) {%>
-				<li class="select">
-					<a href="<%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a>
-					<span class="dot"></span>
-				</li>
-				<% }else{ %>
-				<li>
-					<a href="<%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a>
-					<span class="dot"></span>
-				</li>
-				<% } %>
-				<% } %>
-			</ul>
-		</div>
-		<div class="h-right-close">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-				<path fill="none" d="M0 0h24v24H0z" />
-				<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
-			</svg>
+	<div class="header">
+		<div class="header-top">
+			<div class="h-left">
+				<a href="<%= theme.menus.home %>">
+					<img src="<%- theme.logo %>" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					<% for(const menu in theme.menus) { %>
+						<% if( name==menu ) {%>
+							<li class="select">
+								<a href="<%= theme.menus[menu] %>">
+									<%= theme.menus_title[menu] %>
+								</a>
+								<span class="dot"></span>
+							</li>
+							<% }else{ %>
+								<li>
+									<a href="<%= theme.menus[menu] %>">
+										<%= theme.menus_title[menu] %>
+									</a>
+									<span class="dot"></span>
+								</li>
+								<% } %>
+									<% } %>
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
 		</div>
 	</div>
-</div>
-<%- partial('_widget/sidebar') %>
-<script>
-	$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
-</script>
+	<%- partial('_widget/sidebar') %>
+		<script>
+			$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
+		</script>

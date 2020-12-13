@@ -1,39 +1,43 @@
 <%- css('css/links.css') %>
-<%- partial('_partial/header',{name:'links'}) %>
-<%- css('css/atom-one-dark.css') %>
+    <%- partial('_partial/header',{name:'links'}) %>
+        <%- css('css/atom-one-dark.css') %>
 
-<script>hljs.initHighlightingOnLoad();</script>
-<div class="header-bg">
-    <div class="bg-content">
-        <span>
-            <img src="<%- theme.topIcon.linksIcon %>" alt="Q">
-        </span>
-        <h2>
-            <%- page.title %>
-        </h2>
-    </div>
-</div>
-<div class="links-content">
-    <div class="content">
-        <% for(const each of theme.linksList || []) { %>
-        <div class="oneLink">
-            <a href="<%- each.link %>">
-                <div class="lcen">
-                    <div class="UserLinkImg">
-                        <img src="<%- each.image %>" alt="">
-                    </div>
-                    <div class="LinkRight">
-                        <h1><%- each.title %></h1>
-                        <span><%- each.intro  %></span>
-                    </div>
+            <script>hljs.initHighlightingOnLoad();</script>
+            <div class="header-bg">
+                <div class="bg-content">
+                    <span>
+                        <img src="<%- theme.topIcon.linksIcon %>" alt="Q">
+                    </span>
+                    <h2>
+                        <%- page.title %>
+                    </h2>
                 </div>
-            </a>
-        </div>
-        <% } %>
-        <%- css('css/page_cente.css')   %>
-        <div id="article" class="info">
-            <%- page.content %>
-        </div>
-    </div>
-</div>
-<script>$(function () { $('.links-content').addClass('content-move'); })</script>
+            </div>
+            <div class="links-content">
+                <div class="content">
+                    <% for(const each of theme.linksList || []) { %>
+                        <div class="oneLink">
+                            <a href="<%- each.link %>">
+                                <div class="lcen">
+                                    <div class="UserLinkImg">
+                                        <img src="<%- each.image %>" alt="Quiet">
+                                    </div>
+                                    <div class="LinkRight">
+                                        <h1>
+                                            <%- each.title %>
+                                        </h1>
+                                        <span>
+                                            <%- each.intro %>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                            <%- css('css/page_cente.css') %>
+                                <div id="article" class="info">
+                                    <%- page.content %>
+                                </div>
+                </div>
+            </div>
+            <script>$(function () { $('.links-content').addClass('content-move'); })</script>

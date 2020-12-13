@@ -3,57 +3,61 @@
 		<span>
 			<img class="site-logo" src="<%- theme.topIcon.homeIcon %>" alt="Q">
 		</span>
-		<h2><%- theme.home_describe %></h2>
+		<h2>
+			<%- theme.home_describe %>
+		</h2>
 	</div>
 </div>
 <div class="main">
 	<div class="feed">
 		<% page.posts.each(function (post,i) { %>
-		<div class="feed-display">
-			<a href="<%- url_for(post.path) %>">
-				<h2 class="feed-title">
-					<%= post.title %>
-				</h2>
-				<% if(post.cover){ %>
-				<img src="<%= post.cover %>" alt="">
-				<% }else{ %>
-				<img src="<%- theme.default_cover[Math.floor(Math.random()* theme.default_cover.length )] %>" alt="">
-				<% } %>
-			</a>
-			<div class="feed-meat">
-				<div class="meat-info">
-					<div class="info-auth">
-						<a href=""><%- theme.author %></a>
+			<div class="feed-display">
+				<a href="<%- url_for(post.path) %>">
+					<h2 class="feed-title">
+						<%= post.title %>
+					</h2>
+					<% if(post.cover){ %>
+						<img src="<%= post.cover %>" alt="Quiet">
+						<% }else{ %>
+							<img src="<%- theme.default_cover %>" alt="Quiet">
+							<% } %>
+				</a>
+				<div class="feed-meat">
+					<div class="meat-info">
+						<div class="info-auth">
+							<a href="">
+								<%- theme.author %>
+							</a>
+						</div>
+						<div class="info-data">
+							<%- date(post.date, "YYYY-MM-DD" ) %>
+						</div>
 					</div>
-					<div class="info-data">
-						<%- date(post.date, "YYYY-MM-DD") %>
-					</div>
+					<div class="meat-type"></div>
 				</div>
-				<div class="meat-type"></div>
 			</div>
-		</div>
-		<% }) %>
+			<% }) %>
 	</div>
 </div>
 <div class="change-page">
-	<% if(page.prev !== 0){ %>
-	<div class="p-page">
-		<a href="<%- url_for(page.prev_link) %>">
-			<div class="previous">
-				上一页
-			</div>
-		</a>
-	</div>
-	<% } %>
-	<% if(page.next !== 0){  %>
-	<div class="n-page">
-		<a href="<%- url_for(page.next_link) %>">
-			<div class="next">
-				下一页
-			</div>
-		</a>
-	</div>
-	<% } %>
+	<% if(page.prev !==0){ %>
+		<div class="p-page">
+			<a href="<%- url_for(page.prev_link) %>">
+				<div class="previous">
+					上一页
+				</div>
+			</a>
+		</div>
+		<% } %>
+			<% if(page.next !==0){ %>
+				<div class="n-page">
+					<a href="<%- url_for(page.next_link) %>">
+						<div class="next">
+							下一页
+						</div>
+					</a>
+				</div>
+				<% } %>
 </div>
 
 <script>$(function () { $('.feed').addClass('move'); })</script>
