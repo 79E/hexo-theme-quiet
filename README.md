@@ -26,10 +26,12 @@
 ### ⛱预览Dome
 
 - [乔越博客](https://www.79bk.cn/)
+- [Taire's Blog](https://blog.taire.de)
 
 （如果您正在使用 Quiet 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。如果你喜欢这个主题想要收藏下请点下 Star 谢谢～～）
 
 ### 🚁快速使用
+[English Version](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README-EN.md) 
 
 我们首先下载主题
 
