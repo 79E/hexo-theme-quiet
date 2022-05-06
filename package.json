@@ -1,0 +1,29 @@
+{
+    "name": "hexo-theme-quiet",
+    "version": "1.1.0",
+    "description": "🔥A simple, easy to read flat hexo theme. ",
+    "main": "package.json",
+    "scripts": {
+      "test": "echo test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/79E/hexo-theme-quiet.git"
+    },
+    "keywords": [
+      "hexo",
+      "theme",
+      "quiet"
+    ],
+    "author": "Joey (https://github.com/79E/)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/79E/hexo-theme-quiet/issues"
+    },
+    "homepage": "https://79e.cc",
+    "devDependencies": {
+      "hexo": "^6.0.0",
+      "hexo-renderer-ejs": "^2.0.0",
+      "hexo-renderer-less": "^4.0.0"
+    }
+  }

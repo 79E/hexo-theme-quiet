@@ -1,4 +1,4 @@
-<%- css('css/food.css') %>
+
 <div class="footer">
 	<div class="Copyright">
 		©<%= new Date().getFullYear() %> By <%- theme.author %>. 主题：<a
@@ -14,6 +14,8 @@
 	</div>
 </div>
 <%- partial('_widget/gotop') %>
+<%- partial('_widget/analytics')  %>
+<%- partial('_widget/comment')  %>
 <script>
 	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/QiaoBug/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
 </script>

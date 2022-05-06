@@ -1,54 +1,55 @@
-<%
-if(is_archive()){
-    page.title = __('文章归档')
-  }
-%>
-<%- css('css/archive.css') %>
-<%- partial('_partial/header',{name:'archive'}) %>
-<%
-var years = {};
-var PageNum = 0;
-var PageYear = 0;
-site.posts.sort('date').reverse().forEach(function(post){
-    var year = post.date.year()
-    if(years[year]===undefined){
-        years[year] = [];
-        PageYear += 1;
-    }
-    years[year].push(post);
-    PageNum += 1;
-});
-%>
-<div class="header-bg">
-    <div class="bg-content">
-        <span>
-            <img src="<%- theme.topIcon.archivesIcon %>" alt="Q">
-        </span>
 
-        <h2>居然用了 <%- PageYear %> 年一共才写了 <%- PageNum %> 篇文章!</h2>
-    </div>
+<% if(is_archive()){ %>
+    <% page.title = __('文章归档') %>
+    <%- partial('_partial/header',{name:'archive'}) %>
+    <%
+        var years = {};
+        var PageNum = 0;
+        var PageYear = 0;
+        site.posts.sort('date').reverse().forEach(function(post){
+            var year = post.date.year()
+            if(years[year]===undefined){
+                years[year] = [];
+                PageYear += 1;
+            }
+            years[year].push(post);
+            PageNum += 1;
+        });
+    %>
+<% }else if(is_category()){ %>
+    <% page.title = __("文章分类：" + page.category) %>
+    <%- partial('_partial/header',{name:'categories'}) %>
+    <%
+        var years = {};
+        site.posts.sort('date').reverse().forEach(function(post){
+            const categorys = post.categories;
+            if(categorys.length < 1) return
+            categorys.data.map((cat)=>{
+                if(page.category === cat.name){
+                    var year = post.date.year()
+                    if(years[year]===undefined){
+                        years[year] = [];
+                    }
+                    years[year].push(post);
+                }
+            })
+        });
+    %>
+<% } %>
+
+
+<div class="archive">
+    <% if(is_archive()){ %>
+        <%- partial('_widget/header_body',{message:theme.headers.archives.message.replace('year', PageYear).replace('number', PageNum),icon:theme.headers.archives.icon}) %>
+    <% }else if(is_category()){%>
+        <%- partial('_widget/header_body',{message:"文章分类："+page.category,icon:theme.headers.categories.icon}) %>
+    <% } %>
+    <div class="archive-content" id="content">
+        <div class="archive-content-data">
+            <%- partial('_widget/grouping',{data:years,keys:Object.keys(years).reverse()}) %>
+        </div>
+    </div>    
 </div>
-<div class="article-content">
-    <div id="article" class="content">
-        <% Object.keys(years).reverse().forEach(function(year){  %>
-        <p>
-            <%= year %>
-        </p>
-        <% years[year].map(function(post){  %>
-        <a href="<%- config.root %><%- post.path %>">
-            <span><%- (post.title || "Untitled").replace(/[<>&"]/g,function(c){
-                    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-                }) %></span>
-            <time><%= post.date.format('MM-DD') %></time>
-        </a>
-        <% }) %>
-        <% }) %>
-    </div>
-</div>
 
 
 
-
-<script>
-    $(function () { $('.article-content').addClass('content-move'); })
-</script>

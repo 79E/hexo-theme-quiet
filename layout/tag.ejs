@@ -1,31 +1,27 @@
-<%- css('css/tag.css') %>
+
 <%- partial('_partial/header',{name:'tags'}) %>
 <%
-    var date_cursor = 'xxx'
+    let date_cursor = 'xxx'
     page.title =  "标签:" + page.tag
 %>
-<div class="header-bg">
-    <div class="bg-content">
-        <span>
-            <img src="<%- theme.topIcon.tagIcon %>" alt="Q">
-        </span>
-        <h2> <%- page.tag %> </h2>
-    </div>
-</div>
-<div class="article-content">
-    <div id="article" class="content">
-        <div class="list-group">
-            <% page.posts.each(function (post) { %>
-            <% if(date(post.date, "YYYY") != date_cursor) { %>
-            <% date_cursor = date(post.date, "YYYY") %>
-            <p class="h5"><%= date_cursor %></p>
-            <% } %>
-            <a href="<%- url_for(post.path) %>" class="list-group-item list-group-item-action">
-                <span class="archive-post-title"><%= post.title %></span>
-                <time style="float: right;"><%- date(post.date, "MM-DD") %></time>
-            </a>
-            <% }) %>
+
+<%
+    let years = {};
+    page.posts.each(function (post) {
+        if(date(post.date, "YYYY") != date_cursor) {
+            date_cursor = date(post.date, "YYYY")
+            if(years[date_cursor] === undefined){
+                years[date_cursor] = []
+            }
+        }
+        years[date_cursor].push(post);
+    })
+%>
+<div class="tag">
+    <%- partial('_widget/header_body',{message:"文章标签："+page.tag,icon:theme.headers.tags.icon}) %>
+    <div class="tag-content" id="content">
+        <div class="tag-content-data">
+            <%- partial('_widget/grouping',{data:years,keys:Object.keys(years).reverse()}) %>
         </div>
     </div>
 </div>
-<script>$(function () { $('.article-content').addClass('content-move') });</script>

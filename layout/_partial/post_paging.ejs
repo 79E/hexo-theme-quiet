@@ -1,7 +1,7 @@
-<div class="Last-Next">
+<div class="post-paging">
     <% if(page.prev) {%>
     <a href="<%- url_for(page.prev.path) %>">
-        <div class="last">
+        <div class="post-paging-last">
             <span>上一篇</span>
             <p><%= page.prev.title %></p>
         </div>
@@ -10,7 +10,7 @@
 
     <% if(page.next) {%>
     <a href="<%- url_for(page.next.path) %>">
-        <div class="next">
+        <div class="post-paging-next">
             <span>下一篇</span>
             <p><%= page.next.title %></p>
         </div>

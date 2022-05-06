@@ -1,8 +1,9 @@
 <div align="center">
   <a href="https://github.com/qiaobug/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
-    <img src="https://www.79bk.cn/image/logo.png" alt="quiet logo" width="100">
+    <img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220426122600.png" alt="quiet logo" width="100">
   </a>
 </div>
+
 
 <h3 align="center">A simple and flat hexo theme</h3>  
 
@@ -25,13 +26,11 @@
 
 ### Samples
 
-- [Qiao Yue's Blog](https://www.79bk.cn/)
+- [Joey Blog](https://79e.cc/)
 - [Taire's Blog](https://blog.taire.de)
 
-（If you are using the Quiet theme, you're welcome to display your blog. Just add your blog in the `README.md` file and submit a PR. If you like this theme and want to bookmark it, please click on Star! Thank you~~ ）
-
 ### 🚁Getting started
-[中文版 ](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README.md) 
+[中文文档 ](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README.md) 
 
 Download the theme:
 
@@ -54,6 +53,9 @@ index_generator:
   path: ''
   per_page: 9
   order_by: -date
+// There's a 10 below. Modify to 9.
+per_page: 9
+pagination_dir: page
 ```
 
 Set the following item to be the same as mine to display the code highlighting of the article 
@@ -83,7 +85,6 @@ Go to the `source` folder in the root directory to create a `tags` folder and cr
 title: tags
 date: 2020-09-19 16:19:22
 layout: "tags"
-author: 79bk.cn
 ---
 ```
 
@@ -100,7 +101,7 @@ portrait: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
 describe: 'Hi, this is me! I am real human and I like breathing very much'
 type: "about"
 layout: "about"
-author: 79bk.cn
+comments: false
 ---
 ```
 
@@ -111,6 +112,8 @@ author: 79bk.cn
 `portrait` : Avatar, link to your profile picture
 
 `describe` ：Introduction (briefly describe yourself) 
+
+`comments`: Whether to open comments
 
 Other attributes do not need to be modified 
 
@@ -130,7 +133,7 @@ title: Links
 date: 2020-09-19
 type: "links"
 layout: "links"
-author: 79bk.cn
+comments: false
 ---
 ```
 
@@ -158,7 +161,10 @@ You need to add an header when publishing an article:
 
 ```
 title: A simple and flat Hexo static theme blog-Quiet 
+comments: false
 categories: Projects
+aubot: Cange-Q
+aubot_link: 'https://github.com/79E/hexo-theme-quiet'
 tags:
   - Hexo
   - Quiet
@@ -185,6 +191,12 @@ cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 
 `cover`：Thumbnail (you can leave this empty to use a random default cover) 
 
+`comments`: Whether to open comments
+
+`aubot`：The author name is not set and defaults to the name in the configuration file
+
+`aubot_link`: the address to jump to by clicking on the author's name in the article page Default jump to the about me page
+
 ### 🏆Theme configuration
 
 Enter the `_config.yml` configuration file of the `Quiet` file inside the `themes` folder in the theme root directory.
@@ -195,7 +207,63 @@ You can set the title of the website and change the Logo icons in it
 
 There is a `linksList` in this configuration file, we can follow the example to add your friendship link 
 
-### 📝 License
+### 💌Comment Configuration
+
+The following is used here `gitalk ` A commenting plugin based on Github Issue and Preact
+
+We just need to configure `gitalk` in the `_config.yml` configuration file inside the `Quiet ` theme file
+
+First, you need to select a public github repository (already exists or create a new github repository) for storing comments.
+
+Then you need to create **GitHub Application**, if not [click here to apply](https://github.com/settings/applications/new), `Authorization callback URL` fill in the domain name of the page currently using the plugin.
+
+**options：**
+
+- **clientID** `String`
+
+  **Required**. GitHub Application Client ID.
+
+- **clientSecret** `String`
+
+  **Required**. GitHub Application Client Secret.
+
+- **repo** `String`
+
+  **Required**. GitHub repository.
+
+- **owner** `String`
+
+  **Required**. GitHub repository owner. Can be personal user or organization.
+
+- **admin** `Array`
+
+  **Required**. GitHub repository owner and collaborators. (Users who having write access to this repository)
+
+*Tip: Only on the article page and the friend page, the About Me page has a comment function.*
+
+### 📈Baidu Statistics
+
+We need to configure Baidu statistics to generate the key that can
+
+### 🔎 Question
+
+- **css styles are not loaded**
+
+  This theme uses `less ` for `css` processing so it relies on `hexo-renderer-less` to recompile after installation
+
+  ```
+  npm i hexo-renderer-less
+  ```
+
+- **ejs as a template language**
+
+  ```
+  npm i hexo-renderer-ejs
+  ```
+
+  
+
+###  License
 
 ![LicenseMIT](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 

@@ -1,7 +1,6 @@
-<%- css('css/page.css') %>
-<%- css('css/page_cente.css')   %>
-<%- css('css/atom-one-dark.css') %>
 <%- partial('_partial/header',{name:'post'}) %>
-<%- partial('_partial/post_head') %>
-<%- partial('_partial/post_centent') %>
-<%- partial('_partial/post_pn') %>
+<div class="post">
+    <%- partial('_partial/post_head') %>
+    <%- partial('_partial/post_centent') %>
+    <%- partial('_partial/post_paging') %>
+</div>

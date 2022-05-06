@@ -1,0 +1,12 @@
+<% if(theme.gitalk.clientID && theme.gitalk.clientSecret) { %>
+    <!-- Gitalk -->
+    <script>
+        const data = '{"clientID":"<%= theme.gitalk.clientID %>","clientSecret":"<%= theme.gitalk.clientSecret %>","repo":"<%= theme.gitalk.repo %>","owner":"<%= theme.gitalk.owner %>","admin":"<%= theme.gitalk.admin %>"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+<% } %>

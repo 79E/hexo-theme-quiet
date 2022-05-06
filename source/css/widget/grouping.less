@@ -1,0 +1,52 @@
+.grouping-style(){
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 64px 40px;
+    font-size: 1.1rem;
+    transition: all 0.4s ease-in-out;
+    p {
+        font-size: 1.55rem;
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-top: 20px;
+    }
+    a {
+        display: flex;
+        text-decoration: none;
+        color: #3C4858;
+        padding: 20px;
+        span {
+            flex-grow: 1;
+        }
+        time {
+            white-space: nowrap;
+        }
+        &:hover {
+            background: #F8F9FB;
+            color: #4CA5CE;
+            border-radius: 6px;
+        }
+    }
+}
+
+.grouping{
+    .grouping-style();
+}
+
+
+@media screen and (max-width: 600px) {
+    .grouping{
+        width: 100%;
+        max-width: 700px;
+        padding: 50px 15px;
+        font-size: 1rem;
+        p {
+            font-size: 1.50rem;
+        }
+        a {
+            padding: 15px;
+        }
+    }
+}    

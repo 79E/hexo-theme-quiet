@@ -1,43 +1,32 @@
-<%- css('css/links.css') %>
-    <%- partial('_partial/header',{name:'links'}) %>
-        <%- css('css/atom-one-dark.css') %>
-
-            <script>hljs.initHighlightingOnLoad();</script>
-            <div class="header-bg">
-                <div class="bg-content">
-                    <span>
-                        <img src="<%- theme.topIcon.linksIcon %>" alt="Q">
-                    </span>
-                    <h2>
-                        <%- page.title %>
-                    </h2>
-                </div>
-            </div>
-            <div class="links-content">
-                <div class="content">
-                    <% for(const each of theme.linksList || []) { %>
-                        <div class="oneLink">
-                            <a href="<%- each.link %>">
-                                <div class="lcen">
-                                    <div class="UserLinkImg">
-                                        <img src="<%- each.image %>" alt="Quiet">
-                                    </div>
-                                    <div class="LinkRight">
-                                        <h1>
-                                            <%- each.title %>
-                                        </h1>
-                                        <span>
-                                            <%- each.intro %>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
+<%- partial('_partial/header',{name:'links'}) %>
+<div class="links">
+    <%- partial('_widget/header_body',{message:theme.headers.links.message,icon:theme.headers.links.icon}) %>
+    <div class="links-content" id="content">
+        <div class="links-content-data">
+            <% for(const each of theme.linksList || []) { %>
+                <div class="links-content-data-item">
+                    <a href="<%- each.link %>">
+                        <div class="card">
+                            <div class="user-link-image">
+                                <img src="<%- each.image %>" alt="Quiet">
+                            </div>
+                            <div class="user-link-info">
+                                <h1>
+                                    <%- each.title %>
+                                </h1>
+                                <span>
+                                    <%- each.intro %>
+                                </span>
+                            </div>
                         </div>
-                        <% } %>
-                            <%- css('css/page_cente.css') %>
-                                <div id="article" class="info">
-                                    <%- page.content %>
-                                </div>
+                    </a>
                 </div>
-            </div>
-            <script>$(function () { $('.links-content').addClass('content-move'); })</script>
+                <% } %>
+                <div id="article" class="links-content-data-info">
+                    <%- page.content %>
+                </div>
+        </div>
+        <div id="<%- page.comments ? 'gitalk-container' : ''%>"></div>
+    </div>
+</div>
+            

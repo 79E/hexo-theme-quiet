@@ -1,6 +1,6 @@
-<%- css('css/header.css') %>
+
 	<div class="header">
-		<div class="header-top">
+		<div class="header-top" id="header-top">
 			<div class="h-left">
 				<a href="<%= theme.menus.home %>">
 					<img src="<%- theme.logo %>" alt="Quiet">
@@ -36,6 +36,3 @@
 		</div>
 	</div>
 	<%- partial('_widget/sidebar') %>
-		<script>
-			$(function () { $(window).scroll(function () { if ($(document).scrollTop() > 100) { $(".header-top").removeClass("header-move2"); $('.header-top').addClass('header-move1') } else { $(".header-top").removeClass("header-move1"); $('.header-top').addClass('header-move2') } }) });
-		</script>

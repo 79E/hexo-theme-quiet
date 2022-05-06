@@ -1,34 +1,23 @@
 <%- partial('_partial/header',{name:'categories'}) %>
-<%- css('css/categories.css') %>
-<div class="header-bg">
-    <div class="bg-content">
-        <span>
-            <img src="<%- theme.topIcon.categoriesIcon %>" alt="Q">
-        </span>
-        <h2>文章分类</h2>
+
+<div class="categories">
+    <%- partial('_widget/header_body',{message:theme.headers.categories.message,icon:theme.headers.categories.icon}) %>
+    <div class="categories-content" id="content">
+        <div class="categories-content-data">
+				<div class="categories-class">
+					<% site.categories.map(function(category,index){  %>
+						<a class="categories-class-card" href="<%- url_for(category.path) %>"
+							style="background-image: url('<%- theme.default_cover %>&id=<%- parseInt(Math.random()*(10000-1)+1) %>');"
+						>
+							<span class="categories-class-card-title"><%= category.name %></span>
+							<div class="categories-class-card-number">
+								<span>
+									<span class="categories-length"><%= category.length %></span> 篇
+								</span>
+							</div>
+						</a>
+					<% }) %>
+				</div>
+        </div>
     </div>
 </div>
-<div class="article-content">
-    <div id="article" class="content">
-        <ul class="onclickul">
-            <% site.categories.map(function(category){  %>
-            <li>
-                <div class="link"><%= category.name %>
-                    <svg t="1602294178324" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="4803" width="200" height="200">
-                        <path
-                            d="M454.188 785.022c-145.192-150.177-290.378-300.353-435.422-450.526-59.842-61.836 37.327-154.021 97.313-91.899 129.23 133.647 258.318 267.296 387.548 400.868 133.646-134.287 267.436-268.574 401.083-402.934 60.84-61.123 158.011 31.060 97.244 91.971-150.105 150.89-300.279 301.703-450.454 452.521-24.933 24.934-72.666 25.575-97.311 0z"
-                            p-id="4804" fill="#3C4858"></path>
-                    </svg>
-                </div>
-                <ul class="submenu">
-                    <% category.posts.map(function(post){  %>
-                    <li><a href="<%- config.root %><%- post.path %>"> <%- post.title %></a></li>
-                    <%  }) %>
-                </ul>
-            </li>
-            <% }) %>
-        </ul>
-    </div>
-</div>
-<script>$(function () { $('.article-content').addClass('content-move'); var Accordion = function (el, multiple) { this.el = el || {}; this.multiple = multiple || false; var links = this.el.find('.link'); links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown) }; Accordion.prototype.dropdown = function (e) { var $el = e.data.el; $this = $(this); $next = $this.next(); $svg = $this.children()[0]; $next.slideToggle(); $this.parent().toggleClass('open'); if (!e.data.multiple) { $el.find('.submenu').not($next).slideUp().parent().removeClass('open') } }; var accordion = new Accordion($('.onclickul'), false) });</script>

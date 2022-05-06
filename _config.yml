@@ -2,13 +2,12 @@
 title: Hexo主题-Quiet主题-Hexo扁平化主题安装
 # 网站标题后缀
 suffix: Quiet
-# 作者名称(会显示在首页文章下面)
-author: CHANGEQ
-# 首页简介（显示在首页顶部Logo的那句话）
-home_describe: A COLLEGE STUDENT WITH IDEALS AND BELIEFS.
+# 作者名称
+author: Joey
 # 网站关键字
 keyword: hexo主题,hexo扁平化主题,Quiet主题
-is_article_img: false  #false是否开启文章背景图显示(随机图片)
+#false是否开启文章背景图显示(随机图片)
+is_article_img: true  
 # 网站描述
 web_description: 描述
 # 导航名称
@@ -32,20 +31,42 @@ menus:
 logo: /image/logo.png
 # 网页标签上那个小图标 一定要用本地存储
 icon: /image/favicon.ico
-# 每个页面上面的图表
-topIcon:
-  homeIcon: "/image/logo.png"
-  archivesIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgicon-remixicon.svg"
-  tagIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgtags.svg"
-  linksIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imga20r7-cftji.svg"
-  categoriesIcon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgblogmyCategory.svg"
-  
-# 标签页显示多少个标签
-tagsNum: 1000
+# 每个页面的展示的图标和一句话
+headers:
+    home: {
+      message: "首页这里应该有一句话，你想想写点什么？",
+      icon: "/image/logo.png"
+    }
+    archives: {
+      # 这里会替换掉两个变量{ year 年，number 总数 } 当然也可以不写这两个变量
+      message: "居然用了 year 年一共才写了 number 篇文章!",
+      icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgicon-remixicon.svg"
+    }
+    tags: {
+      message: "这里是一些展示的标签",
+      icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgtags.svg"
+    }
+    links: {
+      message: "我和我的小伙伴们",
+      icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imga20r7-cftji.svg"
+    }
+    categories: {
+      message: "文章分类",
+      icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgblogmyCategory.svg"
+    }
+
 # 网页访问统计
 web_analytics:  
   enable: false #需要改为true
-  baidu: 4b5fe1472f22fa  # （替换）百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+  baidu: 4b5fe1472f22fadsfs  # （替换）百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
+# 评论 
+gitalk:
+  clientID: 02b3c # （需要替换）GitHub Application Client ID.
+  clientSecret: adfc7b4 #（需要替换）GitHub Application Client Secret.
+  repo: gimment #（需要替换）GitHub repository.
+  owner: duneng #（需要替换）GitHub repository 所有者，可以是个人或者组织。
+  admin: ['duneng'] #（需要替换）GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+
 # 底部显示的图标（github 或者其他）
 bottomIcon: 
   #可以多个
@@ -55,23 +76,16 @@ bottomIcon:
     #图标    
     iconLink: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png',
     #跳转链接    
-    toUrl: 'https://github.com/qiaobug'
+    toUrl: 'https://github.com/79E/hexo-theme-quiet'
   }
 # 友情链接
 linksList:
   - {
-    title: '乔越博客',
+    title: 'Quiet',
     intro: '收藏回忆与分享技术的地方',
-    link: 'https://www.79bk.cn/',
+    link: 'https://github.com/79E/hexo-theme-quiet',
     image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
   }
-# 文字内点击图片放大相关配置
-picture:
-  # 蒙版的颜色也就是 打开图片背景 显示的颜色
-  colour: '#333'
-  # 透明度
-  opacity: 0.5
-  # 图片角度 就是显示图片的角度
-  imgRadius: "10px"
+
 #默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
-default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
+default_cover: http://eett.cc/pictures?type=pc&category=fengjing

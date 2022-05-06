@@ -9,6 +9,7 @@ if (page.title) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="<%- theme.icon %>">
+<%- css('css/index.css') %>
 <% if(page.tags && page.tags.data.length) { 
   let text = ''
   %>
@@ -22,4 +23,9 @@ if (page.title) {
 <meta name="description" content="<%- theme.web_description %>">
 <% } %>
 <%- js('js/jquery.min.js') %>
-<%- partial('_widget/analytics')  %>
+<%- js('js/index.js') %>
+<%- js('js/fancybox.umd.js') %>
+<%- js('js/fancybox-images.js') %>
+<%- js('js/gitalk.min.js') %>
+<%- js('js/hljs.min.js') %>
+<script>hljs.initHighlightingOnLoad();</script>
