@@ -75,6 +75,11 @@ prismjs:
   line_number: true
   tab_replace: ''
 ```
+#### 🏠首页布局
+```
+# 首页文章布局 默认 'card' 可选择 'block-card'
+home_layout: card
+```
 
 #### 🔧标签页
 
@@ -172,6 +177,7 @@ tags:
   - 主题
   - 静态主题
 excerpt: 采用简约大方的扁平化Hexo-Quiet主题
+toc: false
 date: 2020-11-03 20:33:36
 cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 ```
@@ -185,6 +191,8 @@ cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 `tags`：标签可以多个
 
 `excerpt`：描述
+
+`toc`：是否显示文章目录（默认值false）
 
 `date`：创建日期
 

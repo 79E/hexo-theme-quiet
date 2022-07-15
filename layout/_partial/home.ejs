@@ -1,35 +1,68 @@
 <div class="home">
 	<%- partial('_widget/header_body',{message:theme.headers.home.message,icon:theme.headers.home.icon}) %>
 	<div class="main">
-		<div class="feed" id="content">
-			<% page.posts.each(function (post,i) { %>
-				<div class="feed-display">
-					<a href="<%- url_for(post.path) %>">
-						<h2 class="feed-title">
-							<%= post.title %>
-						</h2>
+		<% if(theme.home_layout === 'block-card'){ %>
+			<div class="post-block" id="content">
+				<% page.posts.each(function (post,i) { %>
+					<a href="<%- url_for(post.path) %>" class="post-block-content">
 						<% if(post.cover){ %>
 							<img src="<%= post.cover %>" alt="Quiet">
-							<% }else{ %>
-								<img src="<%- theme.default_cover %>" alt="Quiet">
-								<% } %>
-					</a>
-					<div class="feed-meat">
-						<div class="meat-info">
-							<div class="info-auth">
-									<a href="<%- post.categories.data[0] && post.categories.data[0].path %>">
+						<% }else{ %>
+							<img src="<%- theme.default_cover %>" alt="Quiet">
+						<% } %>
+						<div class="post-block-content-info">
+							<h2><%= post.title %></h2>
+							<span class="post-block-content-info-excerpt">
+								<%= post.excerpt %>
+							</span>
+							<div class="post-block-content-info-exhibition">
+								<div class="post-block-content-info-exhibition-tags">
+									<span class="post-tag">
 										<%- post.categories.data[0] ? post.categories.data[0].name : theme.author ? theme.author : 'Quiet' %>
-									</a>
-							</div>
-							<div class="info-data">
-								<%- date(post.date, "YYYY-MM-DD" ) %>
+									</span>
+									<span class="post-tag">
+										<%- date(post.date, "YYYY-MM-DD" ) %>
+									</span>
+								</div>
+								<div class="meat-type"></div>
 							</div>
 						</div>
-						<div class="meat-type"></div>
-					</div>
-				</div>
+					</a>
 				<% }) %>
-		</div>
+			</div>
+		<% }else{ %>
+			<div class="post-card" id="content">
+				<% page.posts.each(function (post,i) { %>
+					<div class="post-card-display">
+						<a href="<%- url_for(post.path) %>">
+							<h2 class="post-card-title">
+								<%= post.title %>
+							</h2>
+							<% if(post.cover){ %>
+								<img src="<%= post.cover %>" alt="Quiet">
+							<% }else{ %>
+								<img src="<%- theme.default_cover %>" alt="Quiet">
+							<% } %>
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="<%- post.categories.data[0] && post.categories.data[0].path %>">
+											<%- post.categories.data[0] ? post.categories.data[0].name : theme.author ? theme.author : 'Quiet' %>
+										</a>
+								</div>
+								<div class="info-data">
+									<%- date(post.date, "YYYY-MM-DD" ) %>
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				<% }) %>
+			</div>
+		<% } %>
+		
+	
 	</div>
 	<div class="change-page">
 		<% if(page.prev !==0){ %>

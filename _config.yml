@@ -10,6 +10,8 @@ keyword: hexo主题,hexo扁平化主题,Quiet主题
 is_article_img: true  
 # 网站描述
 web_description: 描述
+# 首页文章布局 默认 'card' 可选择 'block-card'
+home_layout: card
 # 导航名称
 menus_title:
   home: HOME

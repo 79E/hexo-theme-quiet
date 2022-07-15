@@ -1,6 +1,14 @@
 <div class="post-content" id="content">
+  
   <div id="article" class="post-content-info">
-      <%- page.content %>
+    <% if( page.toc ){ %>
+      <div id="post-toc">
+        <span class="post-toc-title">文章目录</span>
+        <%- toc(page.content,{list_number:false}) %>
+      </div>
+    <% } %>
+
+    <%- page.content %>
   </div>
   <div id="<%- page.comments ? 'gitalk-container' : ''%>"></div>
 </div>

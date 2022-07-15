@@ -15,7 +15,7 @@ if (page.title) {
   %>
 <% page.tags.data.forEach((item, index) => {
     text += item.name + ','
-  }) %>
+}) %>
 <meta name="keywords" content="<%- text %>">
 <meta name="description" content="<%- page.excerpt %>">
 <% }else{ %>
@@ -27,5 +27,5 @@ if (page.title) {
 <%- js('js/fancybox.umd.js') %>
 <%- js('js/fancybox-images.js') %>
 <%- js('js/gitalk.min.js') %>
-<%- js('js/hljs.min.js') %>
+<%- js('js/hljs.min.js') %> 
 <script>hljs.initHighlightingOnLoad();</script>

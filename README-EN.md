@@ -75,7 +75,11 @@ prismjs:
   line_number: true
   tab_replace: ''
 ```
-
+#### 🏠 Homepage layout
+```
+# The default layout of the home page article is'card', and'block-card' can be selected
+home_layout: card
+```
 #### 🔧Tags page
 
 Go to the `source` folder in the root directory to create a `tags` folder and create a new `index.md` file 
@@ -173,6 +177,7 @@ tags:
   - you
   - use
 excerpt: A simple and generous flat theme for Hexo - Quiet 
+toc: false
 date: 2020-11-03 20:33:36
 cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 ```
@@ -186,6 +191,8 @@ cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 `tags`：You can use multiple tags to describe the content
 
 `excerpt`: A short description of the article
+
+`toc`：Whether to display the article directory (the default value is false)
 
 `date`：Creation date
 
