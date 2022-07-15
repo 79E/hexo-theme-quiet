@@ -63,7 +63,7 @@ pagination_dir: page
 ```
 # 我的配置
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: true
   tab_replace: ''

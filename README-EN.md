@@ -63,7 +63,7 @@ Set the following item to be the same as mine to display the code highlighting o
 ```
 # Example configuration
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: true
   tab_replace: ''
