@@ -5,8 +5,7 @@
 			display: flex;
 			width: 100%;
 			box-sizing: border-box;
-			max-width: 900px;
-			padding: 64px 40px;
+			padding: 64px 80px;
 			font-size: 1rem;
 			flex-wrap: wrap;
 			transition: all 0.4s ease-in-out;
@@ -61,3 +60,20 @@
 		}
 	}
 }    
+
+
+@media screen and (max-width:800px) {
+	.tags-content {
+		&-data{
+			padding: 64px 50px;
+		}
+	}
+}
+
+@media screen and (max-width:600px) {
+	.tags-content {
+		&-data{
+			padding: 64px 16px;
+		}
+	}
+}
