@@ -28,6 +28,7 @@
 
 - [喬一博客](https://79e.cc/)
 - [Taire's Blog](https://blog.taire.de)
+- [neo's Blog](https://www.shbo.xyz)
 
 ### 🚁快速使用
 [English Documents](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README-EN.md) 
