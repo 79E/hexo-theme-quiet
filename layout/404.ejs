@@ -1,91 +1,66 @@
-<div class="demo">
-	<p><span>4</span><span>0</span><span>4</span></p>
-	<p>该页面不存在啦(´･ω･`)！</p>
-	<div class="btn">
+<div class="view404">
+	<img class="view404-logo" src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906150114.png" alt="" srcset="">
+	<p>该页面不存在啦(´･ω･`) </p>
+	<div class="view404-btn">
 		<a href="/" class="goindex">返回首页</a>
 	</div>
+	<img class="view404-background" src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220906150455.png" alt="" srcset="">
 </div>
 
 <style>
 	body {
-		background-color: #ECECEC;
+		background-color: #f7f7f7;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 14px;
 		color: #3c3c3c;
+	}	
+
+	body .footer{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 
-	.demo p:first-child {
+	.view404{
+		width: 100%;
+		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.view404 .view404-logo{
+		width: 200px;
+		margin-top: 100px;
+	}
+
+	.view404 p{
 		text-align: center;
-		font-family: cursive;
-		font-size: 150px;
-		font-weight: bold;
-		line-height: 100px;
-		letter-spacing: 5px;
-		color: #fff;
-	}
-
-	.demo p:first-child span {
-		cursor: pointer;
-		text-shadow: 0px 0px 2px #686868,
-			0px 1px 1px #ddd,
-			0px 2px 1px #d6d6d6,
-			0px 3px 1px #ccc,
-			0px 4px 1px #c5c5c5,
-			0px 5px 1px #c1c1c1,
-			0px 6px 1px #bbb,
-			0px 7px 1px #777,
-			0px 8px 3px rgba(100, 100, 100, 0.4),
-			0px 9px 5px rgba(100, 100, 100, 0.1),
-			0px 10px 7px rgba(100, 100, 100, 0.15),
-			0px 11px 9px rgba(100, 100, 100, 0.2),
-			0px 12px 11px rgba(100, 100, 100, 0.25),
-			0px 13px 15px rgba(100, 100, 100, 0.3);
-		-webkit-transition: all .1s linear;
-		transition: all .1s linear;
-	}
-
-	.demo p:first-child span:hover {
-		text-shadow: 0px 0px 2px #686868,
-			0px 1px 1px #fff,
-			0px 2px 1px #fff,
-			0px 3px 1px #fff,
-			0px 4px 1px #fff,
-			0px 5px 1px #fff,
-			0px 6px 1px #fff,
-			0px 7px 1px #777,
-			0px 8px 3px #fff,
-			0px 9px 5px #fff,
-			0px 10px 7px #fff,
-			0px 11px 9px #fff,
-			0px 12px 11px #fff,
-			0px 13px 15px #fff;
-		-webkit-transition: all .1s linear;
-		transition: all .1s linear;
-	}
-
-	.demo p:not(:first-child) {
-		text-align: center;
-		color: #666;
 		font-family: cursive;
 		font-size: 20px;
-		text-shadow: 0 1px 0 #fff;
-		letter-spacing: 1px;
-		line-height: 2em;
-		margin-top: -50px;
+		font-weight: bold;
+		letter-spacing: 5px;
+		color: #333;
+		margin: 30px 0;
 	}
 
-	.btn {
+	.view404-background{
+		width: auto;
+	}
+
+	.view404-btn {
 		width: 100px;
 		height: 40px;
 		border: 1px solid rgb(90, 90, 90);
 		text-align: center;
 		border-radius: 5px;
-		margin: auto;
+		margin: 30px auto;
 		cursor: pointer;
 		transition: all 0.5s;
 	}
 
-	.btn a {
+	.view404-btn a {
 		display: inline-block;
 		width: 100%;
 		height: 100%;
@@ -95,12 +70,12 @@
 		font-size: 1.2em;
 	}
 
-	.btn:hover {
+	.view404-btn:hover {
 		border: 1px solid #333333;
 		background: #333333;
 	}
 
-	.btn a:hover {
+	.view404-btn a:hover {
 		color: #fff;
 	}
 </style>
