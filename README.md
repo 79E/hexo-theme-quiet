@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/qiaobug/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/79E/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220426122600.png" alt="quiet logo" width="100">
   </a>
 </div>
@@ -9,7 +9,7 @@
 
 <div align="center">
   <a href="https://www.79bk.cn/" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/author-qiaobug-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/author-79E-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -17,7 +17,7 @@
   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
     <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
   </a>
-  <a href="https://github.com/qiaobug/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/79E/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
     <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
 </div>
@@ -31,12 +31,12 @@
 - [neo's Blog](https://www.shbo.xyz)
 
 ### 🚁快速使用
-[English Documents](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README-EN.md) 
+[English Documents](https://github.com/79E/hexo-theme-quiet/blob/master/README-EN.md) 
 
 我们首先下载主题
 
 ```
-$ git clone https://github.com/QiaoBug/hexo-theme-quiet.git
+$ git clone https://github.com/79E/hexo-theme-quiet.git
 ```
 
 然后我们修改Hexo根目录下的 `_config.yml` 文件启用 Quiet 主题：
@@ -273,7 +273,7 @@ cover: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgQuietView.png'
 
 ![LicenseMIT](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 
-根据 [MIT](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/LICENSE) 协议开源
+根据 [MIT](https://github.com/79E/hexo-theme-quiet/blob/master/LICENSE) 协议开源
 
 
 

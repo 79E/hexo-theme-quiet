@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/qiaobug/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/79E/hexo-theme-quiet/" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.jsdelivr.net/gh/duogongneng/OneMyBlogImg@master/20220426122600.png" alt="quiet logo" width="100">
   </a>
 </div>
@@ -9,7 +9,7 @@
 
 <div align="center">
   <a href="https://www.79bk.cn/" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/author-qiaobug-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/author-79E-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -17,7 +17,7 @@
   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
     <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
   </a>
-  <a href="https://github.com/qiaobug/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/79E/hexo-theme-quiet/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
     <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
 </div>
@@ -31,12 +31,12 @@
 - [neo's Blog](https://www.shbo.xyz)
 
 ### 🚁Getting started
-[中文文档 ](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README.md) 
+[中文文档 ](https://github.com/79E/hexo-theme-quiet/blob/master/README.md) 
 
 Download the theme:
 
 ```
-$ git clone https://github.com/QiaoBug/hexo-theme-quiet.git
+$ git clone https://github.com/79E/hexo-theme-quiet.git
 ```
 
 Modify `_config.yml` of hexo to enable the quiet theme：
@@ -275,7 +275,7 @@ We need to configure Baidu statistics to generate the key that can
 
 ![LicenseMIT](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 
-Open source according to [MIT](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/LICENSE) protocol 
+Open source according to [MIT](https://github.com/79E/hexo-theme-quiet/blob/master/LICENSE) protocol 
 
 
 
