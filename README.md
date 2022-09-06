@@ -26,7 +26,7 @@
 
 ### ⛱预览Dome
 
-- [喬一博客](https://79e.cc/)
+- [Quiet演示](https://79e.cc/)
 - [Taire's Blog](https://blog.taire.de)
 - [neo's Blog](https://www.shbo.xyz)
 

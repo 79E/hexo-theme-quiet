@@ -26,8 +26,9 @@
 
 ### Samples
 
-- [Joey Blog](https://79e.cc/)
+- [Quiet Demo](https://79e.cc/)
 - [Taire's Blog](https://blog.taire.de)
+- [neo's Blog](https://www.shbo.xyz)
 
 ### 🚁Getting started
 [中文文档 ](https://github.com/QiaoBug/hexo-theme-quiet/blob/master/README.md) 
