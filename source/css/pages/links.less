@@ -9,6 +9,7 @@
 			font-size: 18px;
 			justify-content: space-between;
 			flex-wrap: wrap;
+			transition: all 0.4s ease-in-out;
 			img {
 				display: flex;
 				width: 100%;
@@ -81,5 +82,24 @@
 				margin-top: 20px;
 			}	
 		}	
+	}
+}
+
+
+
+
+@media screen and (max-width:800px) {
+	.links-content {
+		&-data{
+			padding: 64px 50px;
+		}
+	}
+}
+
+@media screen and (max-width:600px) {
+	.links-content {
+		&-data{
+			padding: 64px 20px;
+		}
 	}
 }
