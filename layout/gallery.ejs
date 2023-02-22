@@ -44,7 +44,7 @@
   .gallery-section .gallery {
     display: flex;
     flex-wrap: wrap-reverse;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .gallery-section .image {
@@ -58,12 +58,6 @@
     text-align: center;
     transition: 0.4s;
     padding: 5px;
-    min-width: 100px;
-    max-width: 600px;
-  }
-
-  .gallery-section .image:hover img {
-    transform: scale(1.4) rotate(10deg);
   }
 
   @media screen and (max-width: 960px) {
@@ -80,7 +74,7 @@
 
   @media screen and (max-width: 480px) {
     .gallery-section .image {
-      flex: 100%;
+      flex: 70%;
     }
   }
 </style>

@@ -106,18 +106,24 @@ galleries:
       title: sea相册,
       # galleries下的相册文件夹名称
       dirname: 'sea',
-      cover: '/galleries/sea/sea-demo.jpg',
+      cover: '/galleries/sea/sea1.jpg',
       date: '2011-02-02'
   }
   - {
       title: cloud相册,
       dirname: 'cloud',
-      cover: 'https://api.ixiaowai.cn/gqapi/gqapi.php',
+      cover: '/galleries/cloud/cloud1.png',
       date: '2012-02-02'
   }
   - {
       title: mountain相册,
       dirname: 'mountain',
-      cover: 'https://api.ixiaowai.cn/gqapi/gqapi.php',
+      cover: '/galleries/mountain/mountain1.png',
       date: '2013-02-02'
+  }
+  - {
+      title: city相册,
+      dirname: 'city',
+      cover: 'https://api.ixiaowai.cn/gqapi/gqapi.php',
+      date: '2014-02-02'
   }
