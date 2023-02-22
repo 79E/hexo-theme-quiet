@@ -5,11 +5,8 @@ type: gallery
 layout: gallery
 describe: 示例相册的相关介绍
 photos:
- - url: '/galleries/sea/sea-demo.jpg'
- - url: '/galleries/sea/sea-demo.jpg'
- - url: '/galleries/sea/sea-demo.jpg'
- - url: '/galleries/sea/sea-demo.jpg'
- - url: '/image/galleryIcon.png'
- - url: '/image/galleryIcon.png'
- - url: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+ - url: '/galleries/sea/sea1.jpg'
+ - url: '/galleries/sea/sea1.jpg'
+ - url: '/galleries/sea/sea1.jpg'
+ - url: '/galleries/sea/sea1.jpg'
 ---

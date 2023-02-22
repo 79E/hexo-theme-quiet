@@ -117,7 +117,7 @@ layout: galleries
 
 - 方式一：将图片上传到图床，直接填写图片url链接
 
-- 方式二：将图片`sea-demo.jpg`拷贝到`sea`文件夹下，url填写为`/galleries/sea/sea-demo.jpg`
+- 方式二：将图片`sea1.jpg`拷贝到`sea`文件夹下，url填写为`/galleries/sea/sea1.jpg`
 ```
 ---
 title: 这是your_gallery_name相册
@@ -126,9 +126,7 @@ type: gallery
 layout: gallery
 describe: 示例相册的相关介绍
 photos:
- - url: '/image/galleryIcon.png'
- - url: '/galleries/sea/sea-demo.jpg'
- - url: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+ - url: '/galleries/sea/sea1.jpg'
 ---
 ```
 
