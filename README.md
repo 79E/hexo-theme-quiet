@@ -94,6 +94,50 @@ layout: "tags"
 ---
 ```
 
+#### 🏖相册页
+
+在根目录`source`文件夹下创建`galleries`文件夹，并新建`index.md`文件
+
+```
+---
+title: galleries
+date: 2023-02-22 07:33:36
+type: galleries
+layout: galleries
+---
+```
+
+**创建新相册示例**
+
+> 可以直接将/themes/hexo-theme-quiet/galleries文件夹拷贝到/source下
+
+在gallery文件夹下新建`sea`文件夹，并在其中新建`index.md`文件
+
+添加图片：
+
+- 方式一：将图片上传到图床，直接填写图片url链接
+
+- 方式二：将图片`sea-demo.jpg`拷贝到`sea`文件夹下，url填写为`/galleries/sea/sea-demo.jpg`
+```
+---
+title: 这是your_gallery_name相册
+date: 2023-02-22 08:40:23
+type: gallery
+layout: gallery
+describe: 示例相册的相关介绍
+photos:
+ - url: '/image/galleryIcon.png'
+ - url: '/galleries/sea/sea-demo.jpg'
+ - url: 'https://api.ixiaowai.cn/gqapi/gqapi.php'
+---
+```
+
+**解释**
+
+`describe`：相册简介
+
+`photos` ：照片地址
+
 #### 🏂简介页
 
 进入根目录下的`source`文件夹下创建`about`文件夹新建`index.md`文件
