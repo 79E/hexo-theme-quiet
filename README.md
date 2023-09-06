@@ -8,9 +8,6 @@
 <h3 align="center">一款简约扁平化的 Hexo 主题</h3>  
 
 <div align="center">
-  <a href="https://www.79bk.cn/" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/author-qiaobug-blue.svg?style=flat-square&longCache=true">
-  </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
   </a>
@@ -26,7 +23,6 @@
 
 ### ⛱预览Dome
 
-- [喬一博客](https://79e.cc/)
 - [Taire's Blog](https://blog.taire.de)
 - [neo's Blog](https://www.shbo.xyz)
 
