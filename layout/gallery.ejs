@@ -1,0 +1,105 @@
+<%- partial('_partial/header',{name:'galleries'}) %>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+    box-sizing: border-box;
+  }
+
+  .gallery-section {
+    width: 100%;
+    padding: 160px 0;
+    background: #f1f1f1;
+  }
+
+  .inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .gallery-section h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .gallery-section h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    padding-bottom: 40px;
+  }
+
+  .border {
+    width: 180px;
+    height: 4px;
+    background: #333;
+    margin: 60px auto;
+  }
+
+  .gallery-section .gallery {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+  }
+
+  .gallery-section .image {
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-section .image img {
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 960px) {
+    .gallery-section .image {
+      flex: 33.33%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery-section .image {
+      flex: 50%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .gallery-section .image {
+      flex: 70%;
+    }
+  }
+</style>
+<div class="gallery-section">
+  <div class="inner-width">
+    <h1><%- page.title %></h1>
+    <div class="border"></div>
+    <h3><%- page.describe %></h3>
+    <div class="gallery">
+      <% let photos = page.photos %>
+      <% for(var i= 0;i<photos.length;i++) {%>
+      <% let url = photos[i].url %>
+      <a href=<%- url %> class="image">
+        <img src=<%- url %> alt="" />
+      </a>
+      <% } %>
+    </div>
+  </div>
+</div>
+<script>
+  $('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  })
+</script>

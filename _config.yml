@@ -20,6 +20,7 @@ menus_title:
   tags: TAGS
   links: LINKS
   about: ABOUT
+  galleries: GALLERIES
 # 导航 （不建议修改）
 menus:
   home: /
@@ -27,6 +28,7 @@ menus:
   categories: /categories
   tags: /tags
   links: /links
+  galleries: /galleries
   about: /about
   
 # logo
@@ -52,10 +54,15 @@ headers:
       message: "我和我的小伙伴们",
       icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imga20r7-cftji.svg"
     }
+    galleries: {
+      message: "相册",
+      icon: "/image/galleryIcon.png"
+    }
     categories: {
       message: "文章分类",
       icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgblogmyCategory.svg"
     }
+
 
 # 网页访问统计
 web_analytics:  
@@ -93,3 +100,30 @@ linksList:
 # https://api.ixiaowai.cn/gqapi/gqapi.php
 # https://tuapi.eees.cc/api.php?type=302&category=fengjing
 default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
+
+galleries:
+  - {
+      title: sea相册,
+      # galleries下的相册文件夹名称
+      dirname: 'sea',
+      cover: '/galleries/sea/sea1.jpg',
+      date: '2011-02-02'
+  }
+  - {
+      title: cloud相册,
+      dirname: 'cloud',
+      cover: '/galleries/cloud/cloud1.png',
+      date: '2012-02-02'
+  }
+  - {
+      title: mountain相册,
+      dirname: 'mountain',
+      cover: '/galleries/mountain/mountain1.png',
+      date: '2013-02-02'
+  }
+  - {
+      title: city相册,
+      dirname: 'city',
+      cover: 'https://api.ixiaowai.cn/gqapi/gqapi.php',
+      date: '2014-02-02'
+  }
