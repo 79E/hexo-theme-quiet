@@ -26,6 +26,19 @@
 - [Taire's Blog](https://blog.taire.de)
 - [neo's Blog](https://www.shbo.xyz)
 
+### ⬆️支持
+
+<a href="https://edgeone.ai/?from=github" target="_blank" rel="noopener noreferrer">
+  本项目的CDN加速和安全防护由腾讯EdgeOne赞助。
+</a>
+
+---
+
+<a href="https://edgeone.ai/?from=github" target="_blank" rel="noopener noreferrer">
+    <img alt="license" src="https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png">
+  </a>
+
+
 ### 🚁快速使用
 [English Documents](https://github.com/79e/hexo-theme-quiet/blob/master/README-EN.md) 
 
